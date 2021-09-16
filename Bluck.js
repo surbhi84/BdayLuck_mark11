@@ -8,6 +8,13 @@ calcBtn.addEventListener("click", clickHandler);
 function clickHandler() {
   const inputs = inputVal();
 
+  if (inputValidation(inputs)) {
+    BdayluckCalculator();
+    output();
+  } else {
+    validationAlert();
+  }
+
   console.log(inputs.dobVal, inputs.luckyNoVal);
 }
 
