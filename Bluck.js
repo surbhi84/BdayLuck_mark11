@@ -47,9 +47,12 @@ function bdayluckCalculator(inputs) {
 }
 
 function output(sum, inputs) {
-  if (sum % inputs.luckyNoVal == 0) {
-    outputDiv.innerText = "Your Birthday is LUCKY";
-  } else {
-    outputDiv.innerText = "Your Birthday is UNLUCKY";
-  }
+  setTimeout(() => {
+    console.log("inside settimeout");
+    if (sum % inputs.luckyNoVal == 0) {
+      outputDiv.innerText = "Your Birthday is LUCKY";
+    } else {
+      outputDiv.innerText = "Your Birthday is UNLUCKY";
+    }
+  }, 3000);
 }
