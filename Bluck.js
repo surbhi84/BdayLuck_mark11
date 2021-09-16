@@ -17,3 +17,9 @@ function inputVal() {
     luckyNoVal: parseFloat(luckyNo.value),
   };
 }
+
+function inputValidation(inputs) {
+  if (isNaN(inputs.luckyNoVal) || inputs.dobVal == "") return false;
+  if (inputs.luckyNoVal <= 0) return false;
+  return true;
+}
