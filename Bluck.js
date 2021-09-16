@@ -9,7 +9,7 @@ function clickHandler() {
   const inputs = inputVal();
 
   if (inputValidation(inputs)) {
-    BdayluckCalculator();
+    bdayluckCalculator(inputs);
     output();
   } else {
     validationAlert();
@@ -33,4 +33,27 @@ function inputValidation(inputs) {
 
 function validationAlert() {
   outputDiv.innerText = "Enter appropriate inputs";
+}
+
+function bdayluckCalculator(inputs) {
+  const dobVal = inputs.dobVal.replaceAll("-", "");
+  console.log(dobVal[0]);
+  var sum = 0;
+  for (i = 0; i < dobVal.length; i++) {
+    sum += parseFloat(dobVal[i]);
+  }
+  console.log("sum", sum);
+
+  if (sum % inputs.luckyNoVal == 0) {
+    console.log("lucky");
+  } else {
+    console.log("not lucky");
+  }
+
+  //   var isLucky = sum % inputs.luckyNoVal;
+  //   console.log("luck", isLucky);
+}
+
+function output() {
+  outputDiv.innerText = "boooom";
 }
