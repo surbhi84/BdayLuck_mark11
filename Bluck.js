@@ -10,7 +10,6 @@ function clickHandler() {
 
   if (inputValidation(inputs)) {
     bdayluckCalculator(inputs);
-    output();
   } else {
     validationAlert();
   }
@@ -44,16 +43,13 @@ function bdayluckCalculator(inputs) {
   }
   console.log("sum", sum);
 
-  if (sum % inputs.luckyNoVal == 0) {
-    console.log("lucky");
-  } else {
-    console.log("not lucky");
-  }
-
-  //   var isLucky = sum % inputs.luckyNoVal;
-  //   console.log("luck", isLucky);
+  output(sum, inputs);
 }
 
-function output() {
-  outputDiv.innerText = "boooom";
+function output(sum, inputs) {
+  if (sum % inputs.luckyNoVal == 0) {
+    outputDiv.innerText = "Your Birthday is LUCKY";
+  } else {
+    outputDiv.innerText = "Your Birthday is UNLUCKY";
+  }
 }
