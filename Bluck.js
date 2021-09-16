@@ -23,3 +23,7 @@ function inputValidation(inputs) {
   if (inputs.luckyNoVal <= 0) return false;
   return true;
 }
+
+function validationAlert() {
+  outputDiv.innerText = "Enter appropriate inputs";
+}
