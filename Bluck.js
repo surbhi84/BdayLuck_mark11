@@ -2,6 +2,10 @@ var dob = document.querySelector("#b-date");
 var luckyNo = document.querySelector("#lucky-no");
 var calcBtn = document.querySelector(".calc-btn");
 var outputDiv = document.querySelector(".output-div");
+var Gif = document.getElementById("gif");
+
+Gif.style.display = "none";
+console.log(Gif);
 
 calcBtn.addEventListener("click", clickHandler);
 
@@ -41,14 +45,16 @@ function bdayluckCalculator(inputs) {
   for (i = 0; i < dobVal.length; i++) {
     sum += parseFloat(dobVal[i]);
   }
-  console.log("sum", sum);
 
   output(sum, inputs);
 }
 
 function output(sum, inputs) {
+  Gif.style.display = "block";
+
   setTimeout(() => {
-    console.log("inside settimeout");
+    Gif.style.display = "none";
+
     if (sum % inputs.luckyNoVal == 0) {
       outputDiv.innerText = "Your Birthday is LUCKY";
     } else {
