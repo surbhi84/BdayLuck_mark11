@@ -7,17 +7,13 @@ calcBtn.addEventListener("click", clickHandler);
 
 function clickHandler() {
   const inputs = inputVal();
-  //   inputValidation(inputs);
-  //   validationAlert();
-  //   BdayluckCalculator();
-  //   output();
 
   console.log(inputs.dobVal, inputs.luckyNoVal);
 }
 
 function inputVal() {
   return {
-    dobVal: dob.val,
-    luckyNoVal: luckyNo.val,
+    dobVal: dob.value,
+    luckyNoVal: parseFloat(luckyNo.value),
   };
 }
