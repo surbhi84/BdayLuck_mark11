@@ -3,9 +3,19 @@ var luckyNo = document.querySelector("#lucky-no");
 var calcBtn = document.querySelector(".calc-btn");
 var outputDiv = document.querySelector(".output-div");
 var Gif = document.getElementById("gif");
+var info = document.getElementById("info");
+var privNotice = document.getElementById("pri-note");
+var cross = document.getElementById("cross");
 
 Gif.style.display = "none";
 console.log(Gif);
+
+info.addEventListener("click", () => {
+  privNotice.style.display = "inline";
+});
+cross.addEventListener("click", () => {
+  privNotice.style.display = "none";
+});
 
 calcBtn.addEventListener("click", clickHandler);
 
