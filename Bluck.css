@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
 
 body {
   background-image: url("/bday.jpeg");
@@ -43,4 +44,30 @@ input {
   justify-items: center;
   padding-right: 40vw;
   text-align: center;
+}
+.calc-btn {
+  background-color: #fcd89f;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #d51b2b;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+.output-div {
+  color: #fcd89f;
+  font-size: larger;
+  font-family: monospace;
+}
+
+#priv {
+  color: #fcd89f;
+  font-size: larger;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+#info {
+  font-weight: bold;
+  margin: 0.5rem;
 }
