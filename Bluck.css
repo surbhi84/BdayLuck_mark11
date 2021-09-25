@@ -4,6 +4,7 @@
 body {
   background-image: url("/bday.jpeg");
   background-size: cover;
+  margin: 0;
 }
 
 header {
@@ -44,6 +45,7 @@ input {
   justify-items: center;
   padding-right: 40vw;
   text-align: center;
+  padding-bottom: 3rem;
 }
 .calc-btn {
   background-color: #fcd89f;
@@ -70,4 +72,31 @@ input {
 #info {
   font-weight: bold;
   margin: 0.5rem;
+}
+
+footer {
+  margin: 0;
+  text-align: center;
+  background-color: #fcd89f6b;
+}
+
+li {
+  display: inline;
+  list-style: none;
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+ul {
+  padding-left: 0;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+i {
+  color: #d51b2b;
+}
+
+#legacyText {
+  color: #d51b2b;
 }
