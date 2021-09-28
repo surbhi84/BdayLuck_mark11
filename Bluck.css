@@ -2,9 +2,15 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
 
 body {
+  display: flex;
+  flex-direction: column;
+
   background-image: url("/bday.jpeg");
   background-size: cover;
   margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  min-height: 100vh;
 }
 
 header {
@@ -46,6 +52,7 @@ input {
   padding-right: 40vw;
   text-align: center;
   padding-bottom: 3rem;
+  margin-bottom: auto;
 }
 .calc-btn {
   background-color: #fcd89f;
@@ -58,8 +65,10 @@ input {
 
 .output-div {
   color: #fcd89f;
-  font-size: larger;
+  font-size: 2rem;
   font-family: monospace;
+  margin: 2rem;
+  margin-bottom: auto;
 }
 
 #priv {
@@ -78,6 +87,7 @@ footer {
   margin: 0;
   text-align: center;
   background-color: #fcd89f6b;
+  margin-top: auto;
 }
 
 li {
@@ -91,6 +101,7 @@ ul {
   padding-left: 0;
   padding: 1rem;
   margin-bottom: 0;
+  margin-top: auto;
 }
 
 i {
@@ -99,4 +110,19 @@ i {
 
 #legacyText {
   color: #d51b2b;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    font-size: 2rem;
+  }
+  label {
+    font-size: 1.5rem;
+  }
+  .main {
+    padding: 0;
+  }
+  .calc-btn {
+    font-size: 1rem;
+  }
 }

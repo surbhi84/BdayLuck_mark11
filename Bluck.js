@@ -8,7 +8,6 @@ var privNotice = document.getElementById("pri-note");
 var cross = document.getElementById("cross");
 
 Gif.style.display = "none";
-console.log(Gif);
 
 info.addEventListener("click", () => {
   privNotice.style.display = "inline";
@@ -23,7 +22,8 @@ function clickHandler() {
   const inputs = inputVal();
 
   if (inputValidation(inputs)) {
-    bdayluckCalculator(inputs);
+    let dateSum = bdayluckCalculator(inputs);
+    output(dateSum);
   } else {
     validationAlert();
   }
@@ -49,26 +49,30 @@ function validationAlert() {
 }
 
 function bdayluckCalculator(inputs) {
-  const dobVal = inputs.dobVal.replaceAll("-", "");
-  console.log(dobVal[0]);
+  const dobVals = inputs.dobVal.replaceAll("-", "");
+  console.log(dobVals);
   var sum = 0;
-  for (i = 0; i < dobVal.length; i++) {
-    sum += parseFloat(dobVal[i]);
+  for (i = 0; i < dobVals.length; i++) {
+    sum += parseFloat(dobVals[i]);
   }
-
-  output(sum, inputs);
+  console.log(sum);
+  return { sum, inputs };
 }
 
-function output(sum, inputs) {
-  Gif.style.display = "block";
+function output(dateSum) {
+  outputDiv.innerText = null;
 
+  Gif.style.display = "block";
+  console.log(Gif.style.display);
   setTimeout(() => {
     Gif.style.display = "none";
 
-    if (sum % inputs.luckyNoVal == 0) {
-      outputDiv.innerText = "Your Birthday is LUCKY";
+    if (dateSum.sum % dateSum.inputs.luckyNoVal == 0) {
+      console.log("true");
+      outputDiv.innerText = "YAYYY Your Birthday is LUCKY!";
     } else {
-      outputDiv.innerText = "Your Birthday is UNLUCKY";
+      console.log("false");
+      outputDiv.innerText = "OOOPS Your Birthday is UNLUCKY!";
     }
-  }, 3000);
+  }, 5000);
 }
